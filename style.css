@@ -1,0 +1,440 @@
+/* ==========================
+   GOOGLE FONT
+========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root{
+
+    --ok:#22c55e;
+    --warn:#f59e0b;
+    --down:#ef4444;
+
+    --bg:#f5f7fb;
+    --card:#ffffff;
+    --text:#1f2937;
+    --light:#6b7280;
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    background:var(--bg);
+    color:var(--text);
+
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+header{
+
+    background:#1e293b;
+    color:white;
+    text-align:center;
+    padding:30px 20px;
+
+}
+
+header h1{
+
+    font-size:36px;
+    margin-bottom:8px;
+
+}
+
+header p{
+
+    color:#cbd5e1;
+
+}
+
+/* ==========================
+ STATUS BANNER
+========================== */
+
+.status-banner{
+
+    width:90%;
+    max-width:1200px;
+
+    margin:35px auto;
+
+    background:var(--card);
+
+    border-radius:15px;
+
+    padding:25px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+
+}
+
+.status-banner h2{
+
+    color:var(--ok);
+
+}
+
+.status-banner p{
+
+    color:var(--light);
+
+}
+
+/* ==========================
+ PULSE DOT
+========================== */
+
+.pulse{
+
+    width:18px;
+    height:18px;
+
+    border-radius:50%;
+
+    background:var(--ok);
+
+    animation:pulse 1.5s infinite;
+
+}
+
+@keyframes pulse{
+
+0%{
+
+transform:scale(1);
+opacity:1;
+
+}
+
+50%{
+
+transform:scale(1.5);
+opacity:.4;
+
+}
+
+100%{
+
+transform:scale(1);
+opacity:1;
+
+}
+
+}
+
+/* ==========================
+ COMPONENT GRID
+========================== */
+
+.components{
+
+    width:90%;
+    max-width:1200px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(300px,1fr));
+
+    gap:25px;
+
+}
+
+/* ==========================
+ CARD
+========================== */
+
+.card{
+
+    background:var(--card);
+
+    border-radius:15px;
+
+    padding:20px;
+
+    box-shadow:0 8px 18px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:15px;
+
+}
+
+.top h3{
+
+    font-size:20px;
+
+}
+
+/* ==========================
+ STATUS BADGES
+========================== */
+
+.status{
+
+    padding:6px 12px;
+
+    border-radius:20px;
+
+    color:white;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.ok{
+
+    background:var(--ok);
+
+}
+
+.warn{
+
+    background:var(--warn);
+
+}
+
+.down{
+
+    background:var(--down);
+
+}
+
+/* ==========================
+ UPTIME BARS
+========================== */
+
+.uptime{
+
+    display:flex;
+
+    gap:4px;
+
+    margin-top:15px;
+
+}
+
+.uptime span{
+
+    flex:1;
+
+    height:8px;
+
+    border-radius:4px;
+
+}
+
+.green{
+
+    background:var(--ok);
+
+}
+
+.yellow{
+
+    background:var(--warn);
+
+}
+
+.red{
+
+    background:var(--down);
+
+}
+
+/* ==========================
+ INCIDENTS
+========================== */
+
+.incidents{
+
+    width:90%;
+    max-width:1200px;
+
+    margin:50px auto;
+
+}
+
+.incidents h2{
+
+    margin-bottom:20px;
+
+}
+
+.incident{
+
+    background:white;
+
+    padding:18px;
+
+    border-radius:12px;
+
+    margin-bottom:15px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    box-shadow:0 5px 12px rgba(0,0,0,.08);
+
+}
+
+.incident p{
+
+    color:var(--light);
+
+    margin-top:5px;
+
+}
+
+/* ==========================
+ BADGES
+========================== */
+
+.badge{
+
+    color:white;
+
+    padding:8px 15px;
+
+    border-radius:20px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.success{
+
+    background:var(--ok);
+
+}
+
+.warning{
+
+    background:var(--warn);
+
+}
+
+.info{
+
+    background:#3b82f6;
+
+}
+
+/* ==========================
+ FOOTER
+========================== */
+
+footer{
+
+    margin-top:40px;
+
+    padding:20px;
+
+    text-align:center;
+
+    background:#1e293b;
+
+    color:white;
+
+}
+
+/* ==========================
+ RESPONSIVE
+========================== */
+
+@media(max-width:768px){
+
+.status-banner{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.incident{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:12px;
+
+}
+
+header h1{
+
+font-size:28px;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.components{
+
+grid-template-columns:1fr;
+
+}
+
+.card{
+
+padding:18px;
+
+}
+
+.status-banner{
+
+padding:20px;
+
+}
+
+header{
+
+padding:25px 15px;
+
+}
+
+}
